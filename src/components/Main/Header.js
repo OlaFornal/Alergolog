@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'gatsby'
+import Navigation from "./Navigation"
 
 const Content= styled.div`
 width: 70%;
 height: 6.5rem;
 display: flex;
 flex-direction: row;
-border: 1px solid red;
+justify-content: space-between;
 
 ${({ theme }) => theme.media.tabletLandscape} {
 width: 80%;
@@ -42,7 +43,7 @@ const Header = () => (
       <Link to={'/'}>
         <Logo/>
       </Link>
-
+    <Navigation/>
   </Content>
 )
 
