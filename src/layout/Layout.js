@@ -1,6 +1,7 @@
 import React from "react"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import { theme } from "../utils/theme"
+import Header from "../components/Main/Header"
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -8,7 +9,7 @@ padding: 0;
 margin: 0;
 font-family: Montserrat,Arial,sans-serif;
 ${({theme}) => theme.colors.fontColor};
-font-size: 13px;
+font-size: 14px;
 }
 *, *::before, *::after {
 box-sizing: border-box;
@@ -28,6 +29,7 @@ const Layout = ({ children }) => (
     <>
       <GlobalStyle/>
       <StyledWrapper>
+        <Header/>
         {children}
       </StyledWrapper>
     </>
