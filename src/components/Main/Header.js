@@ -15,15 +15,18 @@ width: 80%;
 }
 
 ${({ theme }) => theme.media.tabletPortrait} {
+flex-direction: row-reverse;
 width: 90%;
 height: 5.3rem;
 }
 
 ${({ theme }) => theme.media.phoneLandscape} {
+flex-direction: row-reverse;
 width: 95%;
 }
 
 ${({ theme }) => theme.media.phone} {
+flex-direction: row-reverse;
 width: 98%;
 }
 `;

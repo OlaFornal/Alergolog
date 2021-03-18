@@ -18,6 +18,23 @@ flex-direction: row;
 padding: 0;
 justify-content: space-between;
 align-items: center;
+
+${({ theme }) => theme.media.tabletPortrait} {
+height: 300px;
+flex-direction: column;
+justify-content: center;
+background-color: yellow;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+flex-direction: column;
+justify-content: center;
+}
+
+${({ theme }) => theme.media.phone} {
+flex-direction: column;
+justify-content: center;
+}
 `
 
 const Li = styled.li`
