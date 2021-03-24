@@ -1,9 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import {Link} from 'gatsby'
+import React from "react"
+import styled from "styled-components"
+import { Link } from "gatsby"
 import Navigation from "./Navigation"
+import Hamburger from "./HamburgerMenu"
 
-const Content= styled.div`
+const Content = styled.div`
 width: 70%;
 height: 6.5rem;
 display: flex;
@@ -17,16 +18,24 @@ width: 80%;
 ${({ theme }) => theme.media.tabletPortrait} {
 width: 90%;
 height: 5.3rem;
+justify-content: left;
+padding-left: 4rem;
 }
 
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 95%;
+height: 5.3rem;
+justify-content: left;
+padding-left: 4rem;
 }
 
 ${({ theme }) => theme.media.phone} {
 width: 98%;
+height: 5.3rem;
+justify-content: left;
+padding-left: 4rem;
 }
-`;
+`
 
 const Logo = styled.div`
 width: 270px;
@@ -35,15 +44,51 @@ background-image: url(https://www.alergologkrosno.pl/wp-content/uploads/2017/10/
 background-repeat: no-repeat;
 background-size: contain;
 background-position: center;
+
+
+${({ theme }) => theme.media.tabletPortrait} {
+width: 185px;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+width: 185px;
+}
+
+${({ theme }) => theme.media.phone} {
+width: 185px;
+}
+`
+
+const NavigationBox = styled.div`
+width: 60%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+${({ theme }) => theme.media.tabletPortrait} {
+display: none;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+display: none;
+}
+
+${({ theme }) => theme.media.phone} {
+display: none;
+}
 `
 
 
 const Header = () => (
   <Content>
-      <Link to={'/'}>
-        <Logo/>
-      </Link>
-    <Navigation/>
+    <Hamburger/>
+    <Link to={"/"}>
+      <Logo/>
+    </Link>
+    <NavigationBox>
+      <Navigation/>
+    </NavigationBox>
   </Content>
 )
 

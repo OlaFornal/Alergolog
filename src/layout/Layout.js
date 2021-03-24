@@ -8,13 +8,13 @@ body {
 padding: 0;
 margin: 0;
 font-family: Montserrat,Arial,sans-serif;
-${({theme}) => theme.colors.fontColor};
+${({ theme }) => theme.colors.fontColor};
 font-size: 14px;
 }
 *, *::before, *::after {
 box-sizing: border-box;
 }
-`;
+`
 
 const StyledWrapper = styled.div`
 display: flex;
@@ -22,7 +22,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 width: 100%;
-`;
+`
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
