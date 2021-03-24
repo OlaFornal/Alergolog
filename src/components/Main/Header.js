@@ -16,19 +16,24 @@ width: 80%;
 }
 
 ${({ theme }) => theme.media.tabletPortrait} {
-flex-direction: row-reverse;
 width: 90%;
 height: 5.3rem;
+justify-content: left;
+padding-left: 4rem;
 }
 
 ${({ theme }) => theme.media.phoneLandscape} {
-flex-direction: row-reverse;
 width: 95%;
+height: 5.3rem;
+justify-content: left;
+padding-left: 4rem;
 }
 
 ${({ theme }) => theme.media.phone} {
-flex-direction: row-reverse;
 width: 98%;
+height: 5.3rem;
+justify-content: left;
+padding-left: 4rem;
 }
 `
 
@@ -39,6 +44,19 @@ background-image: url(https://www.alergologkrosno.pl/wp-content/uploads/2017/10/
 background-repeat: no-repeat;
 background-size: contain;
 background-position: center;
+
+
+${({ theme }) => theme.media.tabletPortrait} {
+width: 185px;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+width: 185px;
+}
+
+${({ theme }) => theme.media.phone} {
+width: 185px;
+}
 `
 
 const NavigationBox = styled.div`
