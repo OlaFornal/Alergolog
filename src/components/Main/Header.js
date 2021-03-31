@@ -5,18 +5,13 @@ import Navigation from "./Navigation"
 import Hamburger from "./HamburgerMenu"
 
 const Content = styled.div`
-width: 70%;
-height: 6.5rem;
+width: 90%;
+height: 6.3rem;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 
-${({ theme }) => theme.media.tabletLandscape} {
-width: 80%;
-}
-
 ${({ theme }) => theme.media.tabletPortrait} {
-width: 90%;
 height: 5.3rem;
 justify-content: left;
 padding-left: 4rem;
