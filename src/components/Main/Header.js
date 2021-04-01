@@ -25,7 +25,7 @@ padding-left: 4rem;
 }
 
 ${({ theme }) => theme.media.phone} {
-width: 98%;
+width: 95%;
 height: 5.3rem;
 justify-content: left;
 padding-left: 4rem;

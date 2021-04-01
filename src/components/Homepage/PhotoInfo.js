@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-// import { Link } from "gatsby"
+import { Link } from "gatsby"
 
 
 const Content = styled.div`
@@ -11,12 +11,18 @@ flex-direction: row;
 position: relative;
 top: -20px;
 
+${({ theme }) => theme.media.tabletPortrait} {
+flex-direction: column;
+}
+
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 95%;
+flex-direction: column;
 }
 
 ${({ theme }) => theme.media.phone} {
-width: 98%;
+width: 95%;
+flex-direction: column;
 }
 `
 
@@ -39,6 +45,18 @@ background-color: rgba(9, 171, 169, 1);
 &:nth-of-type(3) {
 background-color: rgba(2, 157, 155, 1);
 }
+
+${({ theme }) => theme.media.tabletPortrait} {
+width: 100%;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+width: 100%;
+}
+
+${({ theme }) => theme.media.phone} {
+width: 100%;
+}
 `
 const Title= styled.div`
 font-size: 16px;
@@ -53,19 +71,24 @@ margin: 5px 0 20px 0;
 `
 
 const Button = styled.button`
-text-decoration: none;
+//text-decoration: none;
 outline: 0;
 cursor: pointer;
 font-weight: 700;
 letter-spacing: 1px;
 line-height: 1;
-transition: all 500ms ease;
 font-size: 12px;
 padding: 13px 26px;
 text-transform: uppercase;
 background-color: transparent;
 border: 2px solid ${({ theme }) => theme.colors.white};
 color: ${({ theme }) => theme.colors.white};
+
+&:hover {
+background-color: ${({ theme }) => theme.colors.white};
+color: ${({ theme }) => theme.colors.fontColor};
+transition: all 500ms ease;
+}
 `
 
 const PhotoInfo = () => (
@@ -74,13 +97,13 @@ const PhotoInfo = () => (
       <Title> Przygotowanie do badań </Title>
       <Info> Aby wyniki badań nie były przekłamane i leczenie było skuteczne. zapoznaj się z poniższymi
         wytycznymi... </Info>
-      <Button> Dowiedz się więcej </Button>
+      <Button> <Link to={"/reading/"}/> Dowiedz się więcej </Button>
     </Box>
     <Box>
       <Title> Konsultacje telefoniczne </Title>
       <Info> Dla pacjentów już objętych opieką poradni. Odpłatne porady telefoniczne z możliwością wysyłania
         e-recept. </Info>
-      <Button> Umów e-wizytę </Button>
+      <Button> <Link to={"/visits/"}/> Umów e-wizytę </Button>
     </Box>
     <Box>
       <Title> Umów się na wizytę </Title>
