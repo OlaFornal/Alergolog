@@ -71,6 +71,7 @@ width: 60%;
 background-color: white;
 box-shadow: 0 0 30px 0 rgba(0,0,0,0.08);
 position: absolute;
+z-index: 3;
 top: 0;
 left: 0;
 transition: transform 400ms;
