@@ -24,11 +24,11 @@ justify-content: flex-start;
 align-items: flex-end;
 
 ${({ theme }) => theme.media.phoneLandscape} {
-padding: 2.5%;
+padding: 25px 2.5%;
 }
 
 ${({ theme }) => theme.media.phone} {
-padding: 1%;
+padding: 25px 1%;
 }
 `
 
