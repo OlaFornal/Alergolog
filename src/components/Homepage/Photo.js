@@ -11,7 +11,7 @@ background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2015/11
 background-position: 50% 5.0601px;
 
 ${({ theme }) => theme.media.phone} {
-height:50vh;
+height: 50vh;
 }
 `
 
@@ -28,7 +28,7 @@ padding: 25px 2.5%;
 }
 
 ${({ theme }) => theme.media.phone} {
-padding: 25px 1%;
+padding: 25px 2.5%;
 }
 `
 

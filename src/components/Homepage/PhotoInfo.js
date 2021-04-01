@@ -11,12 +11,18 @@ flex-direction: row;
 position: relative;
 top: -20px;
 
+${({ theme }) => theme.media.tabletPortrait} {
+flex-direction: column;
+}
+
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 95%;
+flex-direction: column;
 }
 
 ${({ theme }) => theme.media.phone} {
-width: 98%;
+width: 95%;
+flex-direction: column;
 }
 `
 
@@ -38,6 +44,18 @@ background-color: rgba(9, 171, 169, 1);
 
 &:nth-of-type(3) {
 background-color: rgba(2, 157, 155, 1);
+}
+
+${({ theme }) => theme.media.tabletPortrait} {
+width: 100%;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+width: 100%;
+}
+
+${({ theme }) => theme.media.phone} {
+width: 100%;
 }
 `
 const Title= styled.div`
