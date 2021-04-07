@@ -73,6 +73,18 @@ margin-top: 20px;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+
+${({ theme }) => theme.media.tabletPortrait} {
+flex-direction: column;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+flex-direction: column;
+}
+
+${({ theme }) => theme.media.phone} {
+flex-direction: column;
+}
 `
 
 const Box = styled.div`
@@ -82,6 +94,21 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: flex-start;
+
+${({ theme }) => theme.media.tabletPortrait} {
+width: 100%;
+margin-bottom: 20px;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+width: 100%;
+margin-bottom: 20px;
+}
+
+${({ theme }) => theme.media.phone} {
+width: 100%;
+margin-bottom: 20px;
+}
 `
 
 const Image = styled.div`
