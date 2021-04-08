@@ -212,6 +212,58 @@ height: 400px;
 border: 1px solid rgba(0,0,0,.1);
 border-bottom: 2px solid rgba(0,0,0,.1);
 background-color: rgba(0,0,0,.07);
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`
+
+const P5 = styled.div`
+font-size: 12px;
+padding: 0;
+margin: 0;
+font-weight: 800;
+color:${({ theme }) => theme.colors.specialColor};
+`
+
+const P6 = styled.div`
+font-size: 20px;
+font-weight: 800;
+color: ${({ theme }) => theme.colors.specialColor};
+margin: 15px 0;
+`
+
+const P7 = styled(P3)`
+margin-bottom: 0;
+`
+
+const Div = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-bottom: 15px;
+`
+
+const Div2 = styled(Div)`
+padding: 10px 0;
+`
+
+const Line2 = styled(Line)`
+border-bottom: 3px solid ${({ theme }) => theme.colors.specialColor};
+`
+
+const Prescription = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+`
+
+const P8 = styled.p`
+font-size: 20px;
+font-weight: 800;
+margin: 5px 0;
 `
 
 
@@ -239,8 +291,28 @@ const TestsSection = () => (
             na wewnętrzną stronę przedramienia lub w wybranych przypadkach na plecy.</P4>
         </Text>
       </Box>
-      <Box><TimeBox/></Box>
+      <Box>
+        <TimeBox>
+          <Div>
+            <P7>Godziny przyjęć</P7>
+            <Line/>
+            <P7>Krosno</P7>
+          </Div>
+          <P2>ul. Żółkiewskiego 1A</P2>
+          <P2>(pierwsze piętro, wejśćie od tyłu budynku)</P2>
+          <Div2>
+            <P5>Wtorki od 16:00 do 20:00</P5>
+            <P5>Czwartki od 10:00 dp 15:00</P5>
+          </Div2>
+          <P4>Rejestracja pacjentów</P4>
+          <P6>13 432 40 21</P6>
+        </TimeBox>
+      </Box>
     </Links>
+    <Prescription>
+      <P8>Wystawiane są recepty refundowane</P8>
+      <Line2/>
+    </Prescription>
   </Content>
 )
 
