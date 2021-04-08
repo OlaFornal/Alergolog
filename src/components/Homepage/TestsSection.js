@@ -263,7 +263,7 @@ align-items: center;
 const P8 = styled.p`
 font-size: 20px;
 font-weight: 800;
-margin: 5px 0;
+margin: 25px 0 5px 0;
 `
 
 
