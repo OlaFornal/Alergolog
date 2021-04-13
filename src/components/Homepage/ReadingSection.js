@@ -13,9 +13,6 @@ flex-direction: column;
 margin: 50px 0;
 align-items: center;
 
-${({ theme }) => theme.media.tabletPortrait} {
-}
-
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 95%;
 }
@@ -174,12 +171,9 @@ flex-direction: column;
 align-items: flex-start;
 }
 
-${({ theme }) => theme.media.phoneLandscape} {
-flex-direction: column;
-}
-
 ${({ theme }) => theme.media.phone} {
 flex-direction: column;
+align-items: flex-start;
 }
 `
 
