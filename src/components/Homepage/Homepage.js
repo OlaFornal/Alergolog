@@ -3,6 +3,7 @@ import Photo from "./Photo"
 import PhotoInfo from "./PhotoInfo"
 import TestsSection from "./TestsSection"
 import MapOfKrosno from "./Map"
+import ReadingSection from "./ReadingSection"
 
 const HomepageContent = () => (
   <>
@@ -10,6 +11,7 @@ const HomepageContent = () => (
     <PhotoInfo/>
     <TestsSection/>
     <MapOfKrosno/>
+    <ReadingSection/>
   </>
 )
 
