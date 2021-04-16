@@ -17,7 +17,7 @@ width: 90%;
 height: auto;
 display: flex;
 flex-direction: column;
-margin-top: 50px;
+margin: 50px 0;
 align-items: center;
 
 ${({ theme }) => theme.media.tabletPortrait} {
@@ -30,6 +30,7 @@ width: 95%;
 ${({ theme }) => theme.media.phone} {
 width: 95%;
 justify-content: center;
+margin: 30px 0;
 }
 `
 
@@ -61,7 +62,10 @@ font-size: 16px;
 margin-bottom: 40px;
 align-self: center;
 `
-
+const OtherPublications = styled(Header)`
+font-size: 20px;
+margin: 30px 0 10px 0;
+`
 
 const PublicationsSection = () => (
   <MainDiv>
@@ -73,6 +77,8 @@ const PublicationsSection = () => (
       <Article/>
       <Article/>
       <Article/>
+      <Article/>
+      <OtherPublications>Inne publikacje</OtherPublications>
       <Article/>
     </Content>
   </MainDiv>
