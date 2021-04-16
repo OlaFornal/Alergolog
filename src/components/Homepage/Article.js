@@ -20,6 +20,7 @@ font-weight: 400;
 font-size: 16px;
 padding: 20px 0;
 `
+
 const Button = styled.button`
 width: 60px;
 height: 100%;
@@ -45,7 +46,7 @@ flex-direction: column;
 
 const Photo = styled.div`
 background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2015/11/okladka_1-17.png");
-height: 150px;
+min-height: 150px;
 width: 105px;
 background-repeat: no-repeat;
 background-size: cover;
