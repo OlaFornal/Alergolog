@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons"
 
 
 const ArticlesBox = styled.div`
@@ -35,36 +35,83 @@ width: 100%;
 background-color: rgba(255,255,255,.075);
 padding: 0 20px 20px 20px;
 color: ${({ theme }) => theme.colors.white};
+display: flex;
+flex-direction: row;
+
+${({ theme }) => theme.media.phone} {
+flex-direction: column;
+}
 `
+
+const Photo = styled.div`
+background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2015/11/okladka_1-17.png");
+height: 150px;
+width: 105px;
+background-repeat: no-repeat;
+background-size: cover;
+`
+
+const TextBox = styled.div`
+width: calc(100% - 105px);
+height: 100%;
+padding-left: 20px;
+
+${({ theme }) => theme.media.phone} {
+width: 100%;
+padding-left: 0;
+}
+`
+
+const P = styled.p`
+font-weight: 400;
+color: ${({ theme }) => theme.colors.white};
+font-size: 14px;
+`
+
+const P2 = styled(P)`
+font-weight: 700;
+`
+
 
 class Article extends Component {
   constructor(props) {
-    super(props);
-    this.state = {isToggleOn: false};
+    super(props)
+    this.state = { isToggleOn: false }
 
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClick = this.handleClick.bind(this)
   }
 
   handleClick() {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn
-    }));
+    }))
   }
 
   render() {
-    let {isToggleOn} = this.state
+    let { isToggleOn } = this.state
     return (
       <>
-        <ArticlesBox>
-          <ArticleName  onClick={this.handleClick}>Nieżyt nosa - najważniejsze fenotypy i endotypy oraz zasady leczenia</ArticleName>
-          <Button type='button' onClick={this.handleClick}><FontAwesomeIcon icon={faAngleDown}/></Button>
+        <ArticlesBox onClick={this.handleClick}>
+          <ArticleName>Nieżyt nosa - najważniejsze fenotypy i endotypy oraz zasady leczenia</ArticleName>
+          <Button type='button'>
+            {isToggleOn ?
+              <FontAwesomeIcon icon={faAngleUp}/>
+              :
+              <FontAwesomeIcon icon={faAngleDown}/>
+            }
+          </Button>
         </ArticlesBox>
         {isToggleOn ?
-          <Modal>Dr n. med. Rafał Fornal, Prof. dr hab. n. med. Ryszard Kurzawa, Dr n. med. Łukasz Błażowski, Lek Iwona
-            Sak.
-            Nieżyt nosa – najważniejsze fenotypy i endotypy oraz zasady leczenia.
-            Alergia Astma Immunologia 2015, 20 (4): str. 242-252. </Modal>
-          : ''}
+          <Modal>
+            <Photo/>
+            <TextBox>
+              <P>Dr n. med. Rafał Fornal, Prof. dr hab. n. med. Ryszard Kurzawa, Dr n. med. Łukasz Błażowski, Lek Iwona
+                Sak.</P>
+              <P2>Nieżyt nosa – najważniejsze fenotypy i endotypy oraz zasady leczenia.</P2>
+              <P>Alergia Astma Immunologia 2015, 20 (4): str. 242-252.</P>
+            </TextBox>
+          </Modal>
+          : ""}
       </>
     )
   }
