@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons"
+import { faAngleDown, faAngleUp} from "@fortawesome/free-solid-svg-icons"
 
 
 const ArticlesBox = styled.div`
@@ -55,9 +55,15 @@ class Article extends Component {
     let {isToggleOn} = this.state
     return (
       <>
-        <ArticlesBox>
-          <ArticleName  onClick={this.handleClick}>Nieżyt nosa - najważniejsze fenotypy i endotypy oraz zasady leczenia</ArticleName>
-          <Button type='button' onClick={this.handleClick}><FontAwesomeIcon icon={faAngleDown}/></Button>
+        <ArticlesBox  onClick={this.handleClick}>
+          <ArticleName>Nieżyt nosa - najważniejsze fenotypy i endotypy oraz zasady leczenia</ArticleName>
+          <Button type='button'>
+            {isToggleOn ?
+              <FontAwesomeIcon icon={faAngleUp}/>
+              :
+              <FontAwesomeIcon icon={faAngleDown}/>
+            }
+          </Button>
         </ArticlesBox>
         {isToggleOn ?
           <Modal>Dr n. med. Rafał Fornal, Prof. dr hab. n. med. Ryszard Kurzawa, Dr n. med. Łukasz Błażowski, Lek Iwona
