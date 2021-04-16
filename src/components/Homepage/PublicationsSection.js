@@ -62,6 +62,7 @@ font-size: 16px;
 margin-bottom: 40px;
 align-self: center;
 `
+
 const OtherPublications = styled(Header)`
 font-size: 20px;
 margin: 30px 0 10px 0;
