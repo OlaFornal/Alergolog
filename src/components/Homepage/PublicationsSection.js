@@ -29,6 +29,7 @@ width: 95%;
 
 ${({ theme }) => theme.media.phone} {
 width: 95%;
+justify-content: center;
 }
 `
 
@@ -58,6 +59,7 @@ color: ${({ theme }) => theme.colors.white};
 font-weight: 400;
 font-size: 16px;
 margin-bottom: 40px;
+align-self: center;
 `
 
 
