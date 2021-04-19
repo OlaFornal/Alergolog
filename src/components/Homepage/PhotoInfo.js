@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const Content = styled.div`
 width: 90%;
-height: auto;
+height: 240px;
 display: flex;
 flex-direction: row;
 position: relative;
@@ -13,15 +13,18 @@ top: -20px;
 
 ${({ theme }) => theme.media.tabletPortrait} {
 flex-direction: column;
+height: auto;
 }
 
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 95%;
+height: auto;
 flex-direction: column;
 }
 
 ${({ theme }) => theme.media.phone} {
 width: 95%;
+height: auto;
 flex-direction: column;
 }
 `
@@ -32,6 +35,7 @@ height: 100%;
 padding: 40px 30px;
 display: flex;
 flex-direction: column;
+justify-content: space-between;
 color: ${({ theme }) => theme.colors.white};
 
 &:nth-of-type(1) {
