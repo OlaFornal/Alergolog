@@ -2,6 +2,7 @@ import React from "react"
 import styled, { createGlobalStyle, ThemeProvider } from "styled-components"
 import { theme } from "../utils/theme"
 import Header from "../components/Main/Header"
+import Footer from "../components/Main/Footer"
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -31,6 +32,7 @@ const Layout = ({ children }) => (
       <StyledWrapper>
         <Header/>
         {children}
+        <Footer/>
       </StyledWrapper>
     </>
   </ThemeProvider>
