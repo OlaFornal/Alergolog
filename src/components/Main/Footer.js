@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-
 const MainDiv = styled.div`
 width: 100%;
 height: auto;
@@ -16,6 +15,7 @@ width: 90%;
 height: 100%;
 display: flex;
 flex-direction: row;
+justify-content: space-between;
 background-color: transparent;
 padding: 20px 0;
 
@@ -46,7 +46,7 @@ background-position: center;
 `
 
 const Box = styled.div`
-width: 32%;
+width: 29%;
 height: 100%;
 display: flex;
 flex-direction: column;
@@ -87,7 +87,7 @@ const SecondDiv = styled.div`
 width: 100%;
 display: flex;
 justify-content: center;
-background-color: #262626;
+background-color: #1d1f27;
 `
 
 const A = styled.a`
@@ -114,6 +114,98 @@ justify-content: center;
 }
 `
 
+const LearnMore = styled.div`
+width: 100%;
+font-size: 20px;
+color: ${({ theme }) => theme.colors.white};
+margin-top: 20px;
+`
+
+const Line = styled.div`
+width: 40px;
+height: 3px;
+margin: 10px 0 15px 0;
+border-bottom: 3px solid ${({ theme }) => theme.colors.specialColor};;
+`
+
+const SingleArticle = styled.div`
+width: 100%;
+display: flex;
+flex-direction: row;
+margin-bottom: 20px;
+`
+
+const StyledLink = styled(Link)`
+width: 80px;
+height: 80px;
+margin: 0 15px 0 0;
+`
+
+const Image = styled.div`
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2020/06/dpa-dx-immunoblot_photos-640x480.jpg");
+width: 80px;
+height: 80px;
+transition: .6s all;
+transition-delay: .2s; 
+
+&:hover {
+opacity: 0.5;
+transition-delay: 0s; 
+}
+`
+
+const Image2 = styled(Image)`
+background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2020/06/vaccination-2722937_1920-640x480.jpg");
+`
+
+const TextBox2 = styled.div`
+display: flex;
+flex-direction: column;
+height: 80px;
+`
+
+const P3 = styled.p`
+font-size: 11px;
+text-transform: uppercase;
+color: rgba(255,255,255,.55);
+margin: 0 0 3px 0;
+`
+
+const StyledLink2 = styled(Link)`
+width: 100%;
+margin: 0;
+text-decoration: none;
+color: ${({ theme }) => theme.colors.white};
+transition: .6s all;
+transition-delay: .2s; 
+
+&:hover {
+color: ${({ theme }) => theme.colors.specialColor};
+transition-delay: 0s; 
+}
+`
+
+const Title = styled.div`
+font-weight: 600;
+line-height: 1.35;
+font-size: 14px;
+
+${({ theme }) => theme.media.tabletPortrait} {
+font-size: 12px;
+}
+
+${({ theme }) => theme.media.phoneLandscape} {
+font-size: 12px;
+}
+
+${({ theme }) => theme.media.phone} {
+font-size: 12px;
+}
+`
+
 const Footer = () => (
   <>
     <MainDiv>
@@ -131,8 +223,28 @@ const Footer = () => (
             <P>alergolog, specjalista chorób dziecięcych</P>
           </TextBox>
         </Box>
-        <Box></Box>
-        <Box></Box>
+        <Box>
+          <LearnMore>Dowiedz się więcej</LearnMore>
+          <Line/>
+          <SingleArticle>
+            <StyledLink to={"/reading/"}><Image/></StyledLink>
+            <TextBox2>
+              <P3>Czerwiec 18, 2020</P3>
+              <StyledLink2 to={"/reading/"}><Title>Diagnostyka molekularna alergii IgE-zależnej</Title></StyledLink2>
+            </TextBox2>
+          </SingleArticle>
+          <SingleArticle>
+            <StyledLink to={"/reading/"}><Image2/></StyledLink>
+            <TextBox2>
+              <P3>Czerwiec 18, 2020</P3>
+              <StyledLink2 to={"/reading/"}><Title>Immunoterapia alergenowa (odczulanie)</Title></StyledLink2>
+            </TextBox2>
+          </SingleArticle>
+        </Box>
+        <Box>
+          <LearnMore>Przygotowanie do badań</LearnMore>
+          <Line/>
+        </Box>
       </Content>
     </MainDiv>
     <SecondDiv>
