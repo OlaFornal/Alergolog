@@ -206,6 +206,12 @@ font-size: 12px;
 }
 `
 
+const Title2 = styled(Title)`
+text-transform: none;
+font-size: 13px;
+margin-bottom: 10px;
+`
+
 const Footer = () => (
   <>
     <MainDiv>
@@ -244,6 +250,8 @@ const Footer = () => (
         <Box>
           <LearnMore>Przygotowanie do badań</LearnMore>
           <Line/>
+          <StyledLink2 to={"/preparation/"}><Title2>Prygotowanie do spirometrii</Title2></StyledLink2>
+          <StyledLink2 to={"/preparation/"}><Title2>Przygotowanie do testów skórnych</Title2></StyledLink2>
         </Box>
       </Content>
     </MainDiv>
