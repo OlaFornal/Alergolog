@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF"
 
 const MainDiv = styled.div`
 width: 100%;
@@ -92,9 +94,17 @@ background-color: #1d1f27;
 
 const A = styled.a`
 color: ${({ theme }) => theme.colors.specialColor};
-font-size: 1.5rem;
+font-size: 13px;
 font-weight: bold;
 text-decoration: none;
+
+${({ theme }) => theme.media.phoneLandscape} {
+margin-top: 3px;
+}
+
+${({ theme }) => theme.media.phone} {
+margin-top: 5px;
+}
 `
 
 const SecondContent = styled(Content)`
@@ -258,7 +268,7 @@ const Footer = () => (
     <SecondDiv>
       <SecondContent>
         <P>&copy; 2017. Wszystkie prawa zastrzeżone</P>
-        <A href="https://www.facebook.com/alergologkrosno">f</A>
+        <A href="https://www.facebook.com/alergologkrosno"><FontAwesomeIcon icon={faFacebookF}/></A>
       </SecondContent>
     </SecondDiv>
   </>
