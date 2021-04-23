@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons/faFacebookF"
 
 const Nav = styled.ul`
 width: 100%;
@@ -46,7 +48,7 @@ transition: .6s all;
 `
 const A = styled.a`
 color: ${({ theme }) => theme.colors.specialColor};
-font-size: 1.5rem;
+font-size: 14px;
 font-weight: bold;
 text-decoration: none;
 `
@@ -56,7 +58,7 @@ const Navigation = () => (
     <Li><StyledLink to={"/visits/"}>e-wizyty</StyledLink></Li>
     <Li><StyledLink to={"/preparation/"}>przygotowanie do badań</StyledLink></Li>
     <Li><StyledLink to={"/reading/"}>do poczytania</StyledLink></Li>
-    <Li><A href="https://www.facebook.com/alergologkrosno">f</A></Li>
+    <Li><A href="https://www.facebook.com/alergologkrosno"><FontAwesomeIcon icon={faFacebookF}/></A></Li>
   </Nav>
 )
 
