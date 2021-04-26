@@ -71,7 +71,7 @@ margin: 30px 0 10px 0;
 const PublicationsSection = () => (
   <MainDiv>
     <Content>
-      <Header>Do poczytania</Header>
+      <Header>Wybrane publikacje</Header>
       <P>Ostatnie, wybrane publikacje z zakresu alergologii i pedatrii w czasopismach dla lekarzy</P>
       <Article/>
       <Article/>
