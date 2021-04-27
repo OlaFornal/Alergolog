@@ -42,7 +42,7 @@ cursor: pointer;
 
 &:hover {
 color: ${({ theme }) => theme.colors.specialColor};
-transition: .6s all;   
+transition: .6s all;
 }
 
 `
