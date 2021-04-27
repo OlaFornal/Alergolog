@@ -49,6 +49,7 @@ font-size: 27px;
 
 const Content2 = styled(Content)`
 padding: 50px 0;
+align-items: flex-start;
 
 ${({ theme }) => theme.media.tabletPortrait} {
 flex-direction: column;
@@ -68,6 +69,7 @@ padding: 20px 0;
 const Photo = styled.div`
 width: 50%;
 height: 100vh;
+max-height: 650px;
 background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2020/04/diogo-brandao-cUXK9-kQfy4-unsplash.jpg");
 background-repeat: no-repeat;
 background-position: 50% 90%;
@@ -75,17 +77,24 @@ background-size: 100%;
 
 ${({ theme }) => theme.media.tabletPortrait} {
 width: 100%;
+height: 60vh;
+max-height: 560px;
+min-height: 480px;
+
 }
 
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 100%;
 height: 60vh;
-
+max-height: 350px;
+min-height: 300px;
 }
 
 ${({ theme }) => theme.media.phone} {
 width: 100%;
 height: 40vh;
+max-height: 200px;
+min-height: 190px;
 }
 `
 
