@@ -67,7 +67,7 @@ padding: 20px 0;
 `
 const Photo = styled.div`
 width: 50%;
-height: 80vh;
+//height: 80vh;
 background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2017/10/astma.jpg");
 background-repeat: no-repeat;
 background-size: 100%;
@@ -93,23 +93,25 @@ max-height: 200px;
 
 const Photo2 = styled(Photo)`
 background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2015/11/testy-alergiczne-1.jpg");
-background-position: bottom;
 
 ${({ theme }) => theme.media.tabletPortrait} {
 height: 100vh;
 max-height: 600px;
+background-position: bottom;
 }
 
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 100%;
 height: 100vh;
 max-height: 400px;
+background-position: bottom;
 }
 
 ${({ theme }) => theme.media.phone} {
 width: 100%;
 height: 40vh;
 max-height: 300px;
+background-position: bottom;
 }
 `
 
