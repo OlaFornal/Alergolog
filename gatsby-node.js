@@ -1,7 +1,82 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
+const path = require(`path`)
+const { createFilePath } = require(`gatsby-source-filesystem`)
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const result = await graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___created], order: DESC }
+          limit: 1000
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              frontmatter {
+                title,
+                slug
+              }
+            }
+          }
+        }
+      }
+    `
+  )
+
+  if (result.errors) {
+    throw result.errors
+  }
+
+  // Create blog posts pages.
+  const posts = result.data.allMarkdownRemark.edges
+
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+
+    createPage({
+      path: post.node.frontmatter.slug,
+      component: blogPost,
+      context: {
+        slug: post.node.frontmatter.slug,
+        previous,
+        next,
+      },
+    })
+  })
+
+  // Create blog post list pages
+  const postsPerPage = 5
+  const numPages = Math.ceil(posts.length / postsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/do-poczytania/` : `/do-poczytania/${i + 1}`,
+      component: path.resolve("./src/templates/blog-index.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+}
+
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode })
+    createNodeField({
+      name: `slug`,
+      node,
+      value,
+    })
+  }
+}
