@@ -14,21 +14,18 @@ justify-content: space-between;
 ${({ theme }) => theme.media.tabletPortrait} {
 height: 5.3rem;
 justify-content: left;
-padding-left: 4rem;
 }
 
 ${({ theme }) => theme.media.phoneLandscape} {
 width: 95%;
 height: 5.3rem;
 justify-content: left;
-padding-left: 4rem;
 }
 
 ${({ theme }) => theme.media.phone} {
 width: 95%;
 height: 5.3rem;
 justify-content: left;
-padding-left: 4rem;
 }
 `
 

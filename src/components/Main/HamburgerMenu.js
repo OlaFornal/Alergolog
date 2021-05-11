@@ -4,6 +4,9 @@ import Nav from "./Navigation"
 
 const MainBox = styled.div`
 display: none;
+justify-content: center;
+align-items: center;
+margin-right: 15px;
 
 ${({ theme }) => theme.media.tabletPortrait} {
 display: flex;
@@ -18,9 +21,6 @@ display: flex;
 }
 `
 const MenuIcon = styled.button`
-position: fixed;
-top: 2rem;
-//left: 2rem;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
@@ -31,12 +31,20 @@ cursor: pointer;
 border: none;
 outline: none;
 z-index: 5;
-left: ${({ nav }) => nav ? "50%" : "2rem"};
+transform: ${({ nav }) => nav ? "translateX(250px)" : "none"};
+padding: 0;
 
 &:hover, &:active {
 border: none;
 }
 
+${({ theme }) => theme.media.phoneLandscape} {
+transform: ${({ nav }) => nav ? "translateX(280px)" : "none"};
+}
+
+${({ theme }) => theme.media.phone} {
+transform: ${({ nav }) => nav ? "translateX(210px)" : "none"};
+}
 
 div {
 width: 1.5rem;
@@ -62,12 +70,11 @@ transform: ${({ nav }) => nav ? "rotate(-45deg)" : "rotate(0)"};
 
 const MenuLinks = styled.nav`
 display: flex;
-flex-direction: column;
 justify-content: center;
-align-items: center;
 text-align: center;
+flex-direction: column;
 height: 100vh;
-width: 60%;
+width: 350px;
 background-color: white;
 box-shadow: 0 0 30px 0 rgba(0,0,0,0.08);
 position: absolute;
@@ -77,6 +84,7 @@ left: 0;
 transition: transform 400ms;
 transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(-100%)")};
 
+
 ul {
 list-style: none;
 }
@@ -84,6 +92,11 @@ list-style: none;
 li {
 margin-top: 1rem;
 }
+
+${({ theme }) => theme.media.phone} {
+width: 260px;
+}
+
 `
 
 
