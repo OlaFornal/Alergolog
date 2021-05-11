@@ -12,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/content/assets`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -32,15 +32,12 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        fonts: [
-          {
-            family: `Montserrat`,
-            variants: [`400`, `700`, `800`]
-          },
-        ],
+        name: `markdown-pages`,
+        path: `${__dirname}/content/blog`,
       },
     },
+    `gatsby-transformer-remark`,
   ],
 }
