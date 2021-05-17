@@ -4,7 +4,7 @@ slug: "/2017/10/16/alergia/"
 created: "2017.10.16"
 title: "Alergia"
 description: "Choroby alergiczne są jednymi z najczęściej występujących schorzeń współczesnej cywilizacji. Większość chorób z tej grupy ma charakter przewlekły, wymaga systematycznego leczenia. Alergia jest spowodowana nieprawidłową reakcją układu odpornościowego na pewne czynniki. Ta nieprawidłowość polega na nadmiernej reakcji na występujące w środowisku substancje zwane alergenami – u osób zdrowych te substancje nie wywołują objawów uczulenia."
-image: "../assets/blog/odczulanie.jpeg"
+image: "../assets/blog/alergia.jpeg"
 categories: [alergia]
 ---
 
