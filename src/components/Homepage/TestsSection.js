@@ -274,8 +274,8 @@ const TestsSection = () => (
     <P2>Kliknij i zobacz jak przygotować się do badań</P2>
     <Links>
       <Box>
-        <StyledLink to={"/preparation/"}><Image/></StyledLink>
-        <StyledLink2 to={"/preparation/"}><CircleBig><Circle/></CircleBig></StyledLink2>
+        <StyledLink to={"/przygotowanie-do-badan/"}><Image/></StyledLink>
+        <StyledLink2 to={"/przygotowanie-do-badan/"}><CircleBig><Circle/></CircleBig></StyledLink2>
         <Text>
           <P3>Spirometria</P3>
           <P4>Badanie spirometryczne jest podstawowym badaniem czynnościowym w diagnostyce układu
@@ -283,8 +283,8 @@ const TestsSection = () => (
         </Text>
       </Box>
       <Box>
-        <StyledLink to={"/preparation/"}><Image2/></StyledLink>
-        <StyledLink2 to={"/preparation/"}><CircleBig><Circle/></CircleBig></StyledLink2>
+        <StyledLink to={"/przygotowanie-do-badan/"}><Image2/></StyledLink>
+        <StyledLink2 to={"/przygotowanie-do-badan/"}><CircleBig><Circle/></CircleBig></StyledLink2>
         <Text>
           <P3>Testy skórne</P3>
           <P4>Punktowe testy skórne polegają na nałożeniu kropli roztworów kontrolnych i badanych alergenów

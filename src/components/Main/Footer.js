@@ -243,25 +243,25 @@ const Footer = () => (
           <LearnMore>Dowiedz się więcej</LearnMore>
           <Line/>
           <SingleArticle>
-            <StyledLink to={"/reading/"}><Image/></StyledLink>
+            <StyledLink to={"/do-poczytania/"}><Image/></StyledLink>
             <TextBox2>
               <P3>Czerwiec 18, 2020</P3>
-              <StyledLink2 to={"/reading/"}><Title>Diagnostyka molekularna alergii IgE-zależnej</Title></StyledLink2>
+              <StyledLink2 to={"/do-poczytania/"}><Title>Diagnostyka molekularna alergii IgE-zależnej</Title></StyledLink2>
             </TextBox2>
           </SingleArticle>
           <SingleArticle>
-            <StyledLink to={"/reading/"}><Image2/></StyledLink>
+            <StyledLink to={"/do-poczytania/"}><Image2/></StyledLink>
             <TextBox2>
               <P3>Czerwiec 18, 2020</P3>
-              <StyledLink2 to={"/reading/"}><Title>Immunoterapia alergenowa (odczulanie)</Title></StyledLink2>
+              <StyledLink2 to={"/do-poczytania"}><Title>Immunoterapia alergenowa (odczulanie)</Title></StyledLink2>
             </TextBox2>
           </SingleArticle>
         </Box>
         <Box>
           <LearnMore>Przygotowanie do badań</LearnMore>
           <Line/>
-          <StyledLink2 to={"/preparation/"}><Title2>Prygotowanie do spirometrii</Title2></StyledLink2>
-          <StyledLink2 to={"/preparation/"}><Title2>Przygotowanie do testów skórnych</Title2></StyledLink2>
+          <StyledLink2 to={"/przygotowanie-do-badan/"}><Title2>Prygotowanie do spirometrii</Title2></StyledLink2>
+          <StyledLink2 to={"/przygotowanie-do-badan/"}><Title2>Przygotowanie do testów skórnych</Title2></StyledLink2>
         </Box>
       </Content>
     </MainDiv>
