@@ -214,7 +214,7 @@ const ReadingSection = () => (
     <Line/>
     <ArticleBox>
       <Box>
-        <StyledLink to={"/reading/"}><Image/></StyledLink>
+        <StyledLink to={"/do-poczytania/"}><Image/></StyledLink>
         <Text>
           <TimeAndAuthor>
             <Div>
@@ -226,7 +226,7 @@ const ReadingSection = () => (
               <P>by Rafał Fornal</P>
             </Div>
           </TimeAndAuthor>
-          <StyledLink2 to={"/reading/"}><Title>Diagnostyka molekularna alergii IgE-zależnej</Title></StyledLink2>
+          <StyledLink2 to={"/do-poczytania/"}><Title>Diagnostyka molekularna alergii IgE-zależnej</Title></StyledLink2>
           <Description>Gdy pacjent zgłasza się do lekarza z objawami alergii najczęściej
             pierwszymi wykonywanymi testami są wszystkim dobrze znane punktowe
             testy skórne lub oznaczane z krwi panele alergenowoswoistych IgE
@@ -234,7 +234,7 @@ const ReadingSection = () => (
             potrzebne są nam dokładniejsze metody diagnostyczne – z pomocą
             przychodzi diagnostyka molekularna. Ta forma badań ma najczęściej
             formę małych „celowanych” […]</Description>
-          <StyledLink2 to={"/reading/"}>
+          <StyledLink2 to={"/do-poczytania/"}>
             <Reading>
               <FontAwesomeIcon icon={faFolder}/>
               <P>Do poczytania</P>
@@ -243,7 +243,7 @@ const ReadingSection = () => (
         </Text>
       </Box>
       <Box>
-        <StyledLink to={"/reading/"}><Image2/></StyledLink>
+        <StyledLink to={"/do-poczytania/"}><Image2/></StyledLink>
         <Text>
           <TimeAndAuthor>
             <Div>
@@ -255,7 +255,7 @@ const ReadingSection = () => (
               <P>by Rafał Fornal</P>
             </Div>
           </TimeAndAuthor>
-          <StyledLink2 to={"/reading/"}><Title>Immunoterapia alergenowa (odczulanie)</Title></StyledLink2>
+          <StyledLink2 to={"/do-poczytania/"}><Title>Immunoterapia alergenowa (odczulanie)</Title></StyledLink2>
           <Description>Immunoterapia alergenowa, jako jedyna metoda leczenia przyczynowego
             chorób alergicznych zależnych od immunoglobulin E (IgE), jest jednym
             z najważniejszych osiągnięć w alergologii. Poza łagodzeniem objawów
@@ -263,7 +263,7 @@ const ReadingSection = () => (
             objawów także po jej zakończeniu. Zapobiega także rozwojowi uczuleń
             na nowe alergeny oraz zmniejsza ryzyko rozwoju astmy u chorych z
             alergicznym nieżytem nosa.</Description>
-          <StyledLink2 to={"/reading/"}>
+          <StyledLink2 to={"/do-poczytania/"}>
             <Reading>
               <FontAwesomeIcon icon={faFolder}/>
               <P>Do poczytania</P>
@@ -272,7 +272,7 @@ const ReadingSection = () => (
         </Text>
       </Box>
       <Box>
-        <StyledLink to={"/reading/"}><Image3/></StyledLink>
+        <StyledLink to={"/do-poczytania/"}><Image3/></StyledLink>
         <Text>
           <TimeAndAuthor>
             <Div>
@@ -284,7 +284,7 @@ const ReadingSection = () => (
               <P>by Rafał Fornal</P>
             </Div>
           </TimeAndAuthor>
-          <StyledLink2 to={"/reading/"}><Title>Alergia</Title></StyledLink2>
+          <StyledLink2 to={"/do-poczytania/"}><Title>Alergia</Title></StyledLink2>
           <Description>Choroby alergiczne są jednymi z najczęściej występujących schorzeń
             współczesnej cywilizacji. Większość chorób z tej grupy ma charakter
             przewlekły, wymaga systematycznego leczenia. Alergia – czym jest?
@@ -292,7 +292,7 @@ const ReadingSection = () => (
             ergos – reakcja. Alergia jest spowodowana nieprawidłową reakcją
             układu odpornościowego na pewne czynniki. Ta nieprawidłowość polega
             na nadmiernej reakcji na […]</Description>
-          <StyledLink2 to={"/reading/"}>
+          <StyledLink2 to={"/do-poczytania/"}>
             <Reading>
               <FontAwesomeIcon icon={faFolder}/>
               <P>Do poczytania</P>

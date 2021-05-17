@@ -55,9 +55,9 @@ text-decoration: none;
 
 const Navigation = () => (
   <Nav>
-    <Li><StyledLink to={"/visits/"}>e-wizyty</StyledLink></Li>
-    <Li><StyledLink to={"/preparation/"}>przygotowanie do badań</StyledLink></Li>
-    <Li><StyledLink to={"/reading/"}>do poczytania</StyledLink></Li>
+    <Li><StyledLink to={"/e-wizyty/"}>e-wizyty</StyledLink></Li>
+    <Li><StyledLink to={"/przygotowanie-do-badan/"}>przygotowanie do badań</StyledLink></Li>
+    <Li><StyledLink to={"/do-poczytania/"}>do poczytania</StyledLink></Li>
     <Li><A href="https://www.facebook.com/alergologkrosno"><FontAwesomeIcon icon={faFacebookF}/></A></Li>
   </Nav>
 )

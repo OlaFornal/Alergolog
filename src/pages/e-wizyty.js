@@ -3,11 +3,11 @@ import Layout from "../layout/Layout"
 import VisitsContent from "../components/eVisits/EVisits"
 
 
-const Visits = () => (
+const EWizyty = () => (
   <Layout>
     <VisitsContent/>
   </Layout>
 )
 
-export default Visits
+export default EWizyty
 

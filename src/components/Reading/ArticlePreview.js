@@ -182,10 +182,10 @@ transition-delay: 0s;
 const ArticlePreveiew = () => (
   <Content>
     <PhotoBox>
-      <StyledLink to={"/reading/"}><Image/></StyledLink>
+      <StyledLink to={"/do-poczytania/"}><Image/></StyledLink>
     </PhotoBox>
     <Text>
-      <StyledLink to={"/visits/"}>Diagnostyka molekularna alergii IgE-zależnej</StyledLink>
+      <StyledLink to={"/do-poczytania/"}>Diagnostyka molekularna alergii IgE-zależnej</StyledLink>
       <TimeAndAuthor>
         <Div>
           <FontAwesomeIcon icon={faPaperPlane}/>

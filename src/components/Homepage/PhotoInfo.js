@@ -101,13 +101,13 @@ const PhotoInfo = () => (
       <Title> Przygotowanie do badań </Title>
       <Info> Aby wyniki badań nie były przekłamane i leczenie było skuteczne. zapoznaj się z poniższymi
         wytycznymi... </Info>
-      <Button> <Link to={"/reading/"}/> Dowiedz się więcej </Button>
+      <Button> <Link to={"/do-poczytania/"}/> Dowiedz się więcej </Button>
     </Box>
     <Box>
       <Title> Konsultacje telefoniczne </Title>
       <Info> Dla pacjentów już objętych opieką poradni. Odpłatne porady telefoniczne z możliwością wysyłania
         e-recept. </Info>
-      <Button> <Link to={"/visits/"}/> Umów e-wizytę </Button>
+      <Button> <Link to={"/e-wizyty/"}/> Umów e-wizytę </Button>
     </Box>
     <Box>
       <Title> Umów się na wizytę </Title>
