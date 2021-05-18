@@ -86,9 +86,10 @@ border-bottom: none;
 
 const PhotoBox = styled.div`
 width: 40%;
-height: 420px;
+height: auto;
 display: flex;
 justify-content: flex-start;
+box-sizing: border-box;
 
 ${({ theme }) => theme.media.tabletPortrait} {
 width: 100%;
@@ -157,6 +158,7 @@ transition-delay: 0s;
 `
 
 const Image = styled(Img)`
+max-height: 400px;
 transition: .6s all;
 transition-delay: .2s;
 
