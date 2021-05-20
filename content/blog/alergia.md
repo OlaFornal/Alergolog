@@ -8,8 +8,6 @@ image: "../assets/blog/alergia.jpeg"
 categories: [alergia]
 ---
 
-# Alergia
-
 Choroby alergiczne są jednymi z najczęściej występujących schorzeń współczesnej cywilizacji. Większość chorób z tej grupy ma charakter przewlekły, wymaga systematycznego leczenia.
 
 ## Alergia – czym jest?

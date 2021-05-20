@@ -8,8 +8,6 @@ image: "../assets/blog/dpa-dx-immunoblot.jpeg"
 categories: [alergia, diagnostyka]
 ---
 
-# Diagnostyka molekularna alergii IgE-zależnej
-
 Gdy pacjent zgłasza się do lekarza z objawami alergii najczęściej pierwszymi wykonywanymi testami są wszystkim dobrze znane punktowe testy skórne lub oznaczane z krwi panele 
 alergenowoswoistych IgE (wziewne, pokarmowe, pediatryczny itp). Są jednak sytuacje, gdy potrzebne są nam dokładniejsze metody diagnostyczne – z pomocą przychodzi diagnostyka molekularna. 
 Ta forma badań ma najczęściej formę małych „celowanych” paneli np. panel mleko, panel jajko, panel roztocze, panel pyłki. 
