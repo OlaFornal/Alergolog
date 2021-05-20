@@ -5,7 +5,7 @@ import Layout from "../layout/Layout"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPaperPlane, faUser } from "@fortawesome/free-solid-svg-icons"
+import { faPaperPlane, faUser, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 const Article = styled.article`
 width: 90%;
@@ -117,6 +117,103 @@ margin: 0 0 5px 0;
 }
 `
 
+const Nav = styled.nav`
+width: 90%;
+border-top: 0.5px solid rgb(211, 211, 211);
+border-bottom: 0.5px solid rgb(211, 211, 211);
+margin-bottom: 20px;
+
+
+${({ theme }) => theme.media.phoneLandscape} {
+width: 95%;
+}
+
+${({ theme }) => theme.media.phone} {
+width: 95%;
+}
+`
+
+
+const Ul = styled.ul`
+width: 100%;
+list-style: none;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 0;
+
+${({ theme }) => theme.media.tabletLandscape} {
+flex-direction: column;
+}
+
+${({ theme }) => theme.media.phone} {
+flex-direction: column;
+}
+`
+
+const Li = styled.li`
+margin: 0;
+text-decoration: none;
+color: ${({ theme }) => theme.colors.articleColor};
+`
+
+const StyledLink = styled(Link)`
+height: 60px;
+text-decoration: none;
+color: ${({ theme }) => theme.colors.articleColor};
+display: flex;
+flex-direction: row;
+padding: 0;
+transition: .6s all;
+transition-delay: .2s; 
+margin: 5px 0;
+
+&:hover {
+color: ${({ theme }) => theme.colors.specialColor};
+transition-delay: 0s; 
+}
+`
+
+const ArrowBox = styled.div`
+width: 40px;
+height: 100%;
+display: flex;
+justify-content: center;
+background-color: rgba(0,0,0,.07);
+margin: 0;
+align-items: center;
+
+`
+
+const Title = styled.div`
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 0 10px;
+
+&.next {
+align-items: flex-end;
+text-align: end;
+}
+`
+
+// const Brake = styled.div`
+// display: none;
+// width: 100%;
+// border-bottom: 0.5px solid rgb(211, 211, 211);
+// margin: 5px 0;
+//
+// ${({ theme }) => theme.media.tabletLandscape} {
+// display: flex;
+// }
+//
+// ${({ theme }) => theme.media.phone} {
+// display: flex;
+// }
+// `
+
+
 const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const { previous, next } = pageContext
@@ -148,24 +245,33 @@ const BlogPostTemplate = ({ data, pageContext }) => {
         </section>
       </Article>
 
-      <nav>
-        <ul>
-          <li>
+      <Nav>
+        <Ul>
+          <Li>
             {previous && (
-              <Link to={previous.frontmatter.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
+              <StyledLink to={previous.frontmatter.slug} rel="prev">
+                <ArrowBox><FontAwesomeIcon icon={faChevronLeft}/></ArrowBox>
+                <Title>
+                  <strong>POPRZEDNI </strong>
+                  {previous.frontmatter.title}
+                </Title>
+              </StyledLink>
             )}
-          </li>
-          <li>
+          </Li>
+          {/*<Brake/>*/}
+          <Li>
             {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
+              <StyledLink to={next.fields.slug} rel="next">
+                <Title className='next'>
+                  <strong>NASTĘPNY</strong>
+                  {next.frontmatter.title}
+                </Title>
+                <ArrowBox><FontAwesomeIcon icon={faChevronRight}/></ArrowBox>
+              </StyledLink>
             )}
-          </li>
-        </ul>
-      </nav>
+          </Li>
+        </Ul>
+      </Nav>
     </Layout>
   )
 }
