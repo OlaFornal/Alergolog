@@ -8,7 +8,6 @@ image: "../assets/blog/odczulanie.jpeg"
 categories: [alergia, leczenie, odczulanie]
 ---
 
-# Immunoterapia alergenowa (odczulanie)
 
 Immunoterapia alergenowa, jako jedyna metoda leczenia przyczynowego chorób alergicznych zależnych od immunoglobulin E (IgE), jest jednym z najważniejszych osiągnięć w alergologii. 
 Poza łagodzeniem objawów alergii w trakcie jej stosowania, zapewnia długotrwałą redukcję objawów także po jej zakończeniu. Zapobiega także rozwojowi uczuleń na nowe alergeny 

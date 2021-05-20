@@ -8,8 +8,6 @@ image: "../assets/blog/infekcje.jpeg"
 categories: [kaszel, katar, zapalenie oskrzeli, zapalenie krtani, zapalenie płuc]
 ---
 
-# Infekcje dróg oddechowych
-
 Układ oddechowy jest „otwarty” na świat zewnętrzny – wdychane powietrze dostaje się przez nos, gardło, krtań i tchawicę do oskrzeli i dalej aż do pęcherzyków płucnych. 
 Poprzez ten bezpośredni kontakt z powietrzem drogi oddechowe są narażone na działanie czynników chorobotwórczych, obecnych we wdychanym powietrzu. Stąd w niesprzyjających 
 warunkach (wyziębienie organizmu, spadek odporności) często zdarzają się infekcje, szczególnie górnych dróg oddechowych (nosa, gardła i krtani).
