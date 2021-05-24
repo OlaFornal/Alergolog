@@ -45,8 +45,8 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: post.node.frontmatter.slug,
         previous,
-        next,
-      },
+        next
+      }
     })
   })
 
@@ -62,8 +62,8 @@ exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         skip: i * postsPerPage,
         numPages,
-        currentPage: i + 1,
-      },
+        currentPage: i + 1
+      }
     })
   })
 }
@@ -76,7 +76,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `slug`,
       node,
-      value,
+      value
     })
   }
 }
