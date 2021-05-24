@@ -142,7 +142,7 @@ flex-direction: row;
 justify-content: space-between;
 padding: 0;
 
-${({ theme }) => theme.media.tabletLandscape} {
+${({ theme }) => theme.media.phoneLandscape} {
 flex-direction: column;
 }
 
@@ -155,6 +155,18 @@ const Li = styled.li`
 margin: 0;
 text-decoration: none;
 color: ${({ theme }) => theme.colors.articleColor};
+
+&.next {
+${({ theme }) => theme.media.phoneLandscape} {
+width: 100%;
+}
+
+${({ theme }) => theme.media.phone} {
+width: 100%;
+display: flex;
+justify-content: flex-end;
+}
+}
 `
 
 const StyledLink = styled(Link)`
@@ -182,7 +194,6 @@ justify-content: center;
 background-color: rgba(0,0,0,.07);
 margin: 0;
 align-items: center;
-
 `
 
 const Title = styled.div`
@@ -197,21 +208,6 @@ align-items: flex-end;
 text-align: end;
 }
 `
-
-// const Brake = styled.div`
-// display: none;
-// width: 100%;
-// border-bottom: 0.5px solid rgb(211, 211, 211);
-// margin: 5px 0;
-//
-// ${({ theme }) => theme.media.tabletLandscape} {
-// display: flex;
-// }
-//
-// ${({ theme }) => theme.media.phone} {
-// display: flex;
-// }
-// `
 
 
 const BlogPostTemplate = ({ data, pageContext }) => {
@@ -258,10 +254,16 @@ const BlogPostTemplate = ({ data, pageContext }) => {
               </StyledLink>
             )}
           </Li>
-          {/*<Brake/>*/}
-          <Li>
+          {/*<li>*/}
+          {/*  {next && (*/}
+          {/*    <Link to={next.fields.slug} rel="next">*/}
+          {/*      {next.frontmatter.title} →*/}
+          {/*    </Link>*/}
+          {/*  )}*/}
+          {/*</li>*/}
+          <Li className='next'>
             {next && (
-              <StyledLink to={next.fields.slug} rel="next">
+              <StyledLink className='next' to={next.fields.slug} rel="next">
                 <Title className='next'>
                   <strong>NASTĘPNY</strong>
                   {next.frontmatter.title}
