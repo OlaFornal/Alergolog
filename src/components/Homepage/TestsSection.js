@@ -130,29 +130,6 @@ transition-delay: 0s;
 const Image2 = styled(Image)`
 background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2015/11/testy-alergiczne-1-320x320.jpg");
 `
-const CircleBig = styled.div`
-width: 100px;
-height: 100px;
-background-color: ${({ theme }) => theme.colors.white};
-border-radius: 50%;
-display: flex;
-justify-content: center;
-align-items: center;
-transition: .6s all;
-transition-delay: .2s; 
-
-&:hover {
-opacity: 0.9;
-transition-delay: 0s; 
-}
-`
-
-const Circle = styled.div`
-width: 80px;
-height: 80px;
-border-radius: 50%;
-background-color: ${({ theme }) => theme.colors.specialColor};
-`
 
 const StyledLink = styled(Link)`
 width: 100%;
@@ -161,14 +138,18 @@ margin: 0;
 `
 
 const StyledLink2 = styled(Link)`
-width: 100px;
-height: 100px;
-border-radius: 50%;
-position: relative;
-top: -50px;
-display: flex;
-justify-content: center;
-align-items: center;
+cursor: pointer;
+width: 100%;
+margin: 0;
+text-decoration: none;
+color: ${({ theme }) => theme.colors.articleColor};
+transition: .6s all;
+transition-delay: .2s; 
+
+&:hover {
+color: ${({ theme }) => theme.colors.specialColor};
+transition-delay: 0s; 
+}
 `
 
 const Text = styled.div`
@@ -177,8 +158,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 text-align: center;
-position: relative;
-top: -30px;
+margin-top: 10px;
 `
 
 const P3 = styled.div`
@@ -258,6 +238,7 @@ width: 100%;
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-top: 20px;
 `
 
 const P8 = styled.p`
@@ -274,19 +255,17 @@ const TestsSection = () => (
     <P2>Kliknij i zobacz jak przygotować się do badań</P2>
     <Links>
       <Box>
-        <StyledLink to={"/przygotowanie-do-badan/"}><Image/></StyledLink>
-        <StyledLink2 to={"/przygotowanie-do-badan/"}><CircleBig><Circle/></CircleBig></StyledLink2>
+        <StyledLink to="/przygotowanie-do-badan#spiro"><Image/></StyledLink>
         <Text>
-          <P3>Spirometria</P3>
+          <StyledLink2 to="/przygotowanie-do-badan#spiro"><P3>Spirometria</P3></StyledLink2>
           <P4>Badanie spirometryczne jest podstawowym badaniem czynnościowym w diagnostyce układu
             oddechowego i najprostszą metodą oceny właściwości mechanicznych układu oddechowego…</P4>
         </Text>
       </Box>
       <Box>
-        <StyledLink to={"/przygotowanie-do-badan/"}><Image2/></StyledLink>
-        <StyledLink2 to={"/przygotowanie-do-badan/"}><CircleBig><Circle/></CircleBig></StyledLink2>
+        <StyledLink to="/przygotowanie-do-badan#skin"><Image2/></StyledLink>
         <Text>
-          <P3>Testy skórne</P3>
+          <StyledLink2 to="/przygotowanie-do-badan#skin"><P3>Testy skórne</P3></StyledLink2>
           <P4>Punktowe testy skórne polegają na nałożeniu kropli roztworów kontrolnych i badanych alergenów
             na wewnętrzną stronę przedramienia lub w wybranych przypadkach na plecy.</P4>
         </Text>
