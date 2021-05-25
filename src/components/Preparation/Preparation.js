@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-
 const Header = styled.div`
 width: 100%;
 display: flex;
@@ -207,7 +206,6 @@ margin-bottom: 20px;
 }
 `
 
-
 const PreparationContent = () => (
   <>
     <Header>
@@ -217,7 +215,7 @@ const PreparationContent = () => (
     </Header>
     <Content2>
       <Photo/>
-      <Text>
+      <Text id='spiro'>
         <P2>Zasady przygotowania się do badania spirometrycznego</P2>
         <Line/>
         <P3>Badanie spirometryczne jest podstawowym badaniem czynnościowym w
@@ -248,7 +246,7 @@ const PreparationContent = () => (
     </Content2>
     <Background>
       <Content2>
-        <Text2>
+        <Text2 id='skin'>
           <P2>Zasady przygotowania się do punktowych testów skórnych</P2>
           <Line/>
           <P3>
