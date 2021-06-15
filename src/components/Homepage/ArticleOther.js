@@ -79,7 +79,7 @@ width:100%;
 `
 
 
-class Article extends Component {
+class ArticleOther extends Component {
   constructor(props) {
     super(props)
     this.state = { isToggleOn: false }
@@ -96,7 +96,7 @@ class Article extends Component {
     let { isToggleOn } = this.state
     return (
       <>
-        {JSONData.main.map((data, index) => {
+        {JSONData.other.map((data) => {
           return <MainDiv key={data.id}>
             <ArticlesBox onClick={this.handleClick}>
               <ArticleName>{data.title}</ArticleName>
@@ -123,4 +123,4 @@ class Article extends Component {
   }
 }
 
-export default Article
+export default ArticleOther;

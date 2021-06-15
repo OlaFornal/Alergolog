@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons"
+import JSONData from "../../../content/publications"
 
 
 const ArticlesBox = styled.div`
@@ -72,13 +73,14 @@ font-size: 14px;
 const P2 = styled(P)`
 font-weight: 700;
 `
-
+const MainDiv = styled.div`
+width:100%;
+`
 
 class Article extends Component {
   constructor(props) {
     super(props)
     this.state = { isToggleOn: false }
-
     this.handleClick = this.handleClick.bind(this)
   }
 
@@ -92,27 +94,28 @@ class Article extends Component {
     let { isToggleOn } = this.state
     return (
       <>
-        <ArticlesBox onClick={this.handleClick}>
-          <ArticleName>Nieżyt nosa - najważniejsze fenotypy i endotypy oraz zasady leczenia</ArticleName>
-          <Button type='button'>
-            {isToggleOn ?
-              <FontAwesomeIcon icon={faAngleUp}/>
-              :
-              <FontAwesomeIcon icon={faAngleDown}/>
-            }
-          </Button>
-        </ArticlesBox>
-        {isToggleOn ?
-          <Modal>
-            <Photo/>
-            <TextBox>
-              <P>Dr n. med. Rafał Fornal, Prof. dr hab. n. med. Ryszard Kurzawa, Dr n. med. Łukasz Błażowski, Lek Iwona
-                Sak.</P>
-              <P2>Nieżyt nosa – najważniejsze fenotypy i endotypy oraz zasady leczenia.</P2>
-              <P>Alergia Astma Immunologia 2015, 20 (4): str. 242-252.</P>
-            </TextBox>
-          </Modal>
-          : ""}
+        {JSONData.main.map((data) => {
+          return <MainDiv key={data.id}>
+            <ArticlesBox onClick={this.handleClick}>
+              <ArticleName>{data.title}</ArticleName>
+              <Button type='button'>
+                {isToggleOn ?
+                  <FontAwesomeIcon icon={faAngleUp}/>
+                  :
+                  <FontAwesomeIcon icon={faAngleDown}/>
+                }
+              </Button>
+            </ArticlesBox>
+            <Modal style={{ display: isToggleOn ? "flex" : "none" }}>
+              <Photo/>
+              <TextBox>
+                <P>{data.author}</P>
+                <P2>{data.title}</P2>
+                <P>{data.info}</P>
+              </TextBox>
+            </Modal>
+          </MainDiv>
+        })}
       </>
     )
   }
