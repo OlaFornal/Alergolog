@@ -1,0 +1,66 @@
+{
+  "main" : [
+    {
+      "title" : "Nieżyt nosa – najważniejsze fenotypy i endotypy oraz zasady leczenia",
+      "author" : "Dr n. med. Rafał Fornal, Prof. dr hab. n. med. Ryszard Kurzawa, Dr n. med. Łukasz Błażowski, Lek Iwona Sak",
+      "info" : "Alergia Astma Immunologia 2015, 20 (4): str. 242-252",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2015/11/okladka_1-17.png"
+    },
+    {
+      "title" : "Ostry nieżyt nosa u niemowląt i małych dzieci",
+      "author" : "Dr n. med. Rafał Fornal, Prof. dr hab n. med. Ryszard Kurzawa, Dr n. med. Alicja Widerska-Kurzawa",
+      "info" : "Analiza Przypadków w Pediatrii. PZWL. 4/2015.",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2015/11/Ap-ped-42015-320x446.jpg"
+    },
+    {
+      "title" : "Postępowanie z dzieckiem do ukończenia 5 roku życia z zaostrzeniem astmy oskrzelowej",
+      "author" : "Dr n. med. Rafał Fornal, Prof. dr hab n. med. Ryszard Kurzawa, Dr n. med. Łukasz Błażowski, Dr n. med. Alicja Widerska-Kurzaw",
+      "info" : "Analiza Przypadków w Pediatrii. PZWL. 4/2015",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2015/11/Ap-ped-42015-320x446.jpg"
+    },
+    {
+      "title" : "Postępowanie w ostrej pokrzywce u dzieci",
+      "author" : "Dr n. med. Rafał Fornal, Prof. dr hab n. med. Ryszard Kurzawa",
+      "info" : "Analiza Przypadków w Pediatrii. PZWL. Nr 3/2017",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2015/11/Miniaturka-okładka-gazety.jpg"
+    },
+    {
+      "title" : "Czy bilastyna zmieni oblicze alergologii dziecięcej?",
+      "author" : "Fornal R., Kurzawa R",
+      "info" : "Świat Medycyny i Farmacji, wrzesień 2018, str. 78-84",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2020/05/swiat-medycyny-i-farmacji.png"
+    },
+    {
+      "title" : "Kaszel u dzieci – najczęstszy problem w poradni lekarza rodzinnego",
+      "author" : "Sieniawska P., Fornal R., Kurzawa R.",
+      "info" : "Świat Medycyny i Farmacji, Nr 1 (212) styczeń 2019, strony 82-87",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2020/05/swiat-medycyny-i-farmacji.png"
+    },
+    {
+      "title" : "Miejsce rupatadyny w leczeniu pokrzywki i alergicznego nieżytu nosa. Wskazówki praktyczne",
+      "author" : "Kolanko M., Fornal R., Kurzawa R",
+      "info" : "Świat Medycyny i Farmacji, Nr 7 (218) lipiec 2019, strony 68-74",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2020/05/swiat-medycyny-i-farmacji.png"
+    },
+    {
+      "title" : "Zastosowanie budezonidu w zawiesinie do nebulizacji w codziennej praktyce pediatrycznej",
+      "author" : "Sieniawska P., Kolanko M., Książkiewicz A., Fornal R., Kurzawa R.",
+      "info" : "Świat Medycyny i Farmacji, Nr 1 (224) styczeń 2020 r.",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2020/05/swiat-medycyny-i-farmacji.png"
+    },
+    {
+      "title" : "Immunoterapia alergenowa metodą podskórną (SCIT)",
+      "author" : "Sieniawska P., Książkiewicz A., Fornal R.",
+      "info" : "Immunoterapia, Nr 1, 2020, str. 6-10",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2020/05/immunoterapia.png"
+    }
+  ],
+  "other": [
+    {
+      "title" : "Terapia inhalacyjna u dziecka poniżej 5. roku życia z rozpoznaną astmą oskrzelową. Rola pielęgniarki w edukacji",
+      "author" : "Anna Książkiewicz, Rafał Fornal",
+      "info" : "Analiza Przypadków w Pielęgniarstwie i Położnictwie 5/2016., cz II – Nr 6/2016",
+      "photo" : "https://www.alergologkrosno.pl/wp-content/uploads/2015/11/AP-w-pielegniarstwie-II-1.png"
+    }
+  ]
+}
