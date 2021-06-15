@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import Article from "./Article"
+import ArticleOther from "./ArticleOther"
 
 const MainDiv = styled.div`
 width: 100%;
@@ -74,13 +75,8 @@ const PublicationsSection = () => (
       <Header>Wybrane publikacje</Header>
       <P>Ostatnie, wybrane publikacje z zakresu alergologii i pedatrii w czasopismach dla lekarzy</P>
       <Article/>
-      <Article/>
-      <Article/>
-      <Article/>
-      <Article/>
-      <Article/>
       <OtherPublications>Inne publikacje</OtherPublications>
-      <Article/>
+      <ArticleOther/>
     </Content>
   </MainDiv>
 )
