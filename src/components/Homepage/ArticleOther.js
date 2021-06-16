@@ -45,12 +45,9 @@ flex-direction: column;
 }
 `
 
-const Photo = styled.div`
-background-image: url("https://www.alergologkrosno.pl/wp-content/uploads/2015/11/okladka_1-17.png");
+const Photo = styled.img`
 min-height: 150px;
 width: 105px;
-background-repeat: no-repeat;
-background-size: cover;
 `
 
 const TextBox = styled.div`
@@ -109,7 +106,7 @@ class ArticleOther extends Component {
               </Button>
             </ArticlesBox>
             <Modal style={{ display: activeElement === data.id ? "flex" : "none" }}>
-              <Photo/>
+              <Photo src={data.photo}/>
               <TextBox>
                 <P>{data.author}</P>
                 <P2>{data.title}</P2>
