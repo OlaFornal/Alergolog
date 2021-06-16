@@ -80,33 +80,33 @@ width:100%;
 class Article extends Component {
   constructor(props) {
     super(props)
-    this.state = { isToggleOn: false }
+    this.state = { activeElement: null }
     this.handleClick = this.handleClick.bind(this)
   }
 
-  handleClick() {
+  handleClick(id) {
     this.setState(prevState => ({
-      isToggleOn: !prevState.isToggleOn
+      activeElement: prevState.activeElement === id ? null : id
     }))
   }
 
   render() {
-    let { isToggleOn } = this.state
+    let { activeElement } = this.state
     return (
       <>
         {JSONData.main.map((data) => {
           return <MainDiv key={data.id}>
-            <ArticlesBox onClick={this.handleClick}>
+            <ArticlesBox onClick={() => this.handleClick(data.id)}>
               <ArticleName>{data.title}</ArticleName>
               <Button type='button'>
-                {isToggleOn ?
+                {activeElement === data.id ?
                   <FontAwesomeIcon icon={faAngleUp}/>
                   :
                   <FontAwesomeIcon icon={faAngleDown}/>
                 }
               </Button>
             </ArticlesBox>
-            <Modal style={{ display: isToggleOn ? "flex" : "none" }}>
+            <Modal style={{ display: activeElement === data.id ? "flex" : "none" }}>
               <Photo/>
               <TextBox>
                 <P>{data.author}</P>
